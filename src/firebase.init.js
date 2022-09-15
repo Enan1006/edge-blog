@@ -6,12 +6,12 @@ import { getAuth } from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyAB7zaZPGxXLLRdT4kLY2TMv1EA1c9nIUA",
-    authDomain: "edge-blog-16042.firebaseapp.com",
-    projectId: "edge-blog-16042",
-    storageBucket: "edge-blog-16042.appspot.com",
-    messagingSenderId: "495716037047",
-    appId: "1:495716037047:web:5b26bc0ff881bd487fb832"
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_APP_ID
 };
 
 // Initialize Firebase
