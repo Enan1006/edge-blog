@@ -9,6 +9,9 @@ import Login from './pages/Login/Login';
 import Signup from './pages/Login/Signup';
 import ResetPass from './pages/Login/ResetPass';
 import Blogs from './pages/Blogs/Blogs';
+import SignleBlog from './pages/SignleBlog/SignleBlog';
+import RequireAuth from './pages/Shared/ReaquireAuth';
+import MyBlogs from './pages/MyBlogs/MyBlogs';
 
 
 function App() {
@@ -21,8 +24,14 @@ function App() {
           <Route index element={<Dashboard />}></Route>
         </Route> */}
         <Route path='/reset-password' element={<ResetPass />}></Route>
-        <Route path='/add-post' element={<AddBlog />}></Route>
+        <Route path='/add-post' element={
+          <RequireAuth>
+            <AddBlog />
+          </RequireAuth>
+        }></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
+        <Route path='/my-posts' element={<MyBlogs />}></Route>
+        <Route path='/blogs/:blogId' element={<SignleBlog />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
       </Routes>

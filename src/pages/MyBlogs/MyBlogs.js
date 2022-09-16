@@ -1,18 +1,19 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 
-const Blogs = () => {
-    const navigate = useNavigate();
+const MyBlogs = () => {
+    const [user] = useAuthState(auth);
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/posts')
+        const email = user?.email;
+        fetch(`http://localhost:5000/my-post?email=${email}`)
             .then(res => res.json())
             .then(data => setBlogs(data))
-    }, []);
-
-
+    }, [user]);
     return (
         <div>
             <div className='m-20'>
@@ -34,4 +35,4 @@ const Blogs = () => {
     );
 };
 
-export default Blogs;
+export default MyBlogs;

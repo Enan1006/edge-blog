@@ -18,10 +18,13 @@ const Header = () => {
         {
             user
                 ?
-                <li><button onClick={logout} className='bg-red-200 text-red-600'>Logout</button></li>
-                :
                 <div>
                     <li><Link to='/add-post'>Add Blog</Link></li>
+                    <li><Link to='/my-posts'>My Blogs</Link></li>
+                    <li><button onClick={logout}>Logout</button></li>
+                </div>
+                :
+                <div>
                     <li><Link to='/login'>Login</Link></li>
                     <li><Link to='/signup'>Signup</Link></li>
                 </div>
