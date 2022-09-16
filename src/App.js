@@ -12,6 +12,7 @@ import Blogs from './pages/Blogs/Blogs';
 import SignleBlog from './pages/SignleBlog/SignleBlog';
 import RequireAuth from './pages/Shared/ReaquireAuth';
 import MyBlogs from './pages/MyBlogs/MyBlogs';
+import Footer from './pages/Shared/Footer';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
       </Routes>
+      <Footer />
     </div>
   );
 }

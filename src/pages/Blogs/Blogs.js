@@ -1,10 +1,9 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Blogs = () => {
-    const navigate = useNavigate();
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/posts')

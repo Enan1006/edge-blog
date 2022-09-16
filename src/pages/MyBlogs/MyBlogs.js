@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -8,12 +9,19 @@ import auth from '../../firebase.init';
 const MyBlogs = () => {
     const [user] = useAuthState(auth);
     const [blogs, setBlogs] = useState([]);
+    const [posts, setPosts] = useState([]);
     useEffect(() => {
         const email = user?.email;
         fetch(`http://localhost:5000/my-post?email=${email}`)
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [user]);
+    useEffect(() => {
+        fetch('http://localhost:5000/posts')
+            .then(res => res.json())
+            .then(data => setPosts(data))
+    }, []);
+
     return (
         <div>
             <div className='m-20'>
@@ -26,6 +34,7 @@ const MyBlogs = () => {
                             <p>{blog.description.slice(0, 200)}</p>
                             <div className="card-actions justify-end">
                                 <Link to={blog._id} className="text-white bg-green-600 rounded px-6 py-2">See Details</Link>
+
                             </div>
                         </div>
                     </div>)
