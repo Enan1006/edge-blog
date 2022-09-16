@@ -8,6 +8,7 @@ import Header from './pages/Shared/Header';
 import Login from './pages/Login/Login';
 import Signup from './pages/Login/Signup';
 import ResetPass from './pages/Login/ResetPass';
+import Blogs from './pages/Blogs/Blogs';
 
 
 function App() {
@@ -16,11 +17,12 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />}></Route>
-        <Route path='/dashboard' element={<Dashboard />}>
+        {/* <Route path='/dashboard' element={<Dashboard />}>
           <Route index element={<Dashboard />}></Route>
-          <Route path='/dashboard/add-post' element={<AddBlog />}></Route>
-        </Route>
+        </Route> */}
         <Route path='/reset-password' element={<ResetPass />}></Route>
+        <Route path='/add-post' element={<AddBlog />}></Route>
+        <Route path='/blogs' element={<Blogs />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
       </Routes>

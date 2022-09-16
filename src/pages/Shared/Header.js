@@ -11,19 +11,24 @@ const Header = () => {
     };
     const menu = <div className='md:flex'>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/dashboard'>Dashboard</Link></li>
+        <li><Link to='/blogs'>Blog</Link></li>
+        {/* <li><Link to='/dashboard'>Dashboard</Link></li> */}
+    </div>
+    const sideMenu = <div>
         {
             user
                 ?
                 <li><button onClick={logout} className='bg-red-200 text-red-600'>Logout</button></li>
                 :
-                <div className='md:flex'>
+                <div>
+                    <li><Link to='/add-post'>Add Blog</Link></li>
                     <li><Link to='/login'>Login</Link></li>
                     <li><Link to='/signup'>Signup</Link></li>
                 </div>
         }
-
     </div>
+
+
 
     if (user) {
         console.log(user)
@@ -48,7 +53,16 @@ const Header = () => {
                 </ul>
             </div>
             <div class="navbar-end">
-                <Link to='/' class="btn">Get started</Link>
+                <div className="dropdown dropdown-end">
+                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <img src="https://placeimg.com/80/80/people" />
+                        </div>
+                    </label>
+                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-green-600 rounded-box w-52">
+                        {sideMenu}
+                    </ul>
+                </div>
             </div>
         </div>
     );
