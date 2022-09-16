@@ -5,7 +5,7 @@ import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInW
 import auth from '../../firebase.init';
 import { toast } from 'react-toastify';
 
-import Loader from '../Loader/Loader';
+import Loader from '../Shared/Loader';
 
 
 const Signup = () => {

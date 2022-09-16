@@ -16,7 +16,7 @@ const RecentBlogs = () => {
             <div className='grid grid-cols-1 md:grid-cols-2 mt-5'>
                 <div>
                     {
-                        blogs.slice(0, 1).map(blog => <div className="card w-96 bg-base-100 shadow-xl">
+                        blogs.slice(0, 1).map(blog => <div className="card md:mr-10 bg-base-100 shadow-xl">
                             <figure><img className='w-full' src={blog.image} alt="Shoes" /></figure>
                             <div className="card-body">
 
@@ -46,7 +46,7 @@ const RecentBlogs = () => {
                             <div className="card-body">
                                 <h2 className="card-title">{blog.title}</h2>
                                 <div className="card-actions justify-end">
-                                    <button className="btn btn-primary">Watch</button>
+                                    <button className="text-white bg-green-600 px-6 py-2 rounded">Full Article</button>
                                 </div>
                             </div>
                         </div>)
