@@ -7,6 +7,7 @@ import AddBlog from './pages/AddBlog/AddBlog';
 import Header from './pages/Shared/Header';
 import Login from './pages/Login/Login';
 import Signup from './pages/Login/Signup';
+import ResetPass from './pages/Login/ResetPass';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route index element={<Dashboard />}></Route>
           <Route path='/dashboard/add-post' element={<AddBlog />}></Route>
         </Route>
+        <Route path='/reset-password' element={<ResetPass />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signup' element={<Signup />}></Route>
       </Routes>

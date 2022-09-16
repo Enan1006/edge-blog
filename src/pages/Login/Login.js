@@ -41,7 +41,7 @@ const Login = () => {
     return (
         <div>
             <div className="card w-4/5 md:w-1/2 mx-auto bg-base-100 shadow-xl p-20">
-                <h2 className='text-violet-600 font-bold text-4xl text-center'>Please Login!</h2>
+                <h2 className='text-green-600 font-bold text-4xl text-center'>Please Login!</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <div className='mt-5'>
@@ -67,7 +67,7 @@ const Login = () => {
                     </div>
 
                     <div className='mt-5'>
-                        <input type="submit" value="Submit" className="block w-full px-3 py-1.5 text-base font-normal  bg-violet-600 text-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out hover:bg-white hover:text-violet-600 hover:border-violet-600 m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none cursor-pointer" />
+                        <input type="submit" value="Submit" className="block w-full px-3 py-1.5 text-base font-normal  bg-green-600 text-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out hover:bg-white hover:text-green-600 hover:border-green-600 m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none cursor-pointer" />
                     </div>
                 </form>
                 <div className='mt-10'>
@@ -77,7 +77,7 @@ const Login = () => {
                     </button>
                 </div>
                 <div className='mt-5'>
-                    <Link to='/reset-password' className='underline text-violet-600'>Reset Password</Link>
+                    <Link to='/reset-password' className='underline text-green-600'>Reset Password</Link>
                 </div>
             </div>
             <ToastContainer />
