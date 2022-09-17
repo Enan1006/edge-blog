@@ -13,6 +13,7 @@ import SignleBlog from './pages/SignleBlog/SignleBlog';
 import RequireAuth from './pages/Shared/ReaquireAuth';
 import MyBlogs from './pages/MyBlogs/MyBlogs';
 import Footer from './pages/Shared/Footer';
+import Categories from './components/Categories/Categories';
 
 
 function App() {
@@ -31,6 +32,8 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path='/blogs' element={<Blogs />}></Route>
+        {/* <Route path='/categories/:categoryId' element={<Categories />}></Route> */}
+        <Route path='/categories' element={<Categories />}></Route>
         <Route path='/my-posts' element={<MyBlogs />}></Route>
         <Route path='/blogs/:blogId' element={<SignleBlog />}></Route>
         <Route path='/login' element={<Login />}></Route>
