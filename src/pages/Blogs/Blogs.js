@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/posts')
+        fetch('https://edge-blog-server.vercel.app/posts')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, []);

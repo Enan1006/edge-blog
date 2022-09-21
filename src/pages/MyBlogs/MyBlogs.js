@@ -12,18 +12,18 @@ const MyBlogs = () => {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
         const email = user?.email;
-        fetch(`http://localhost:5000/my-post?email=${email}`)
+        fetch(`https://edge-blog-server.vercel.app/my-post?email=${email}`)
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [user]);
     useEffect(() => {
-        fetch('http://localhost:5000/posts')
+        fetch('https://edge-blog-server.vercel.app/posts')
             .then(res => res.json())
             .then(data => setPosts(data))
     }, []);
 
     return (
-        <div>
+        <div className='h-screen'>
             <div className='m-20'>
                 {
                     blogs.map(blog => <div className="card my-10 lg:card-side bg-base-100 shadow-xl">
