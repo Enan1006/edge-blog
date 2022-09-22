@@ -20,7 +20,7 @@ const AddBlog = () => {
             email: user?.email,
             category: data.category
         }
-        fetch('https://edge-blog-server.vercel.app/posts', {
+        fetch('https://edge-blog-server-2.onrender.com/posts', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

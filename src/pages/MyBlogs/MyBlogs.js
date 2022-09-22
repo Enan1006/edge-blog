@@ -12,12 +12,12 @@ const MyBlogs = () => {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
         const email = user?.email;
-        fetch(`https://edge-blog-server.vercel.app/my-post?email=${email}`)
+        fetch(`https://edge-blog-server-2.onrender.com/my-post?email=${email}`)
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [user]);
     useEffect(() => {
-        fetch('https://edge-blog-server.vercel.app/posts')
+        fetch('https://edge-blog-server-2.onrender.com/posts')
             .then(res => res.json())
             .then(data => setPosts(data))
     }, []);

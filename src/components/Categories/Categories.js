@@ -9,7 +9,7 @@ const Categories = () => {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch(`https://edge-blog-server.vercel.app/categories/${categoryId}`)
+        fetch(`https://edge-blog-server-2.onrender.com/categories/${categoryId}`)
             .then(res => res.json())
             .then(data => setCategories(data))
     }, [])

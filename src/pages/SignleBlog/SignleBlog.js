@@ -5,7 +5,7 @@ const SignleBlog = () => {
     const { blogId } = useParams();
     const [blog, setBlog] = useState({});
     useEffect(() => {
-        fetch(`https://edge-blog-server.vercel.app/post/${blogId}`)
+        fetch(`https://edge-blog-server-2.onrender.com/post/${blogId}`)
             .then(res => res.json())
             .then(data => setBlog(data))
     }, [blogId])
